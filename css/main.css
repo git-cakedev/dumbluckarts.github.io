@@ -1,3 +1,13 @@
 html {
     scroll-behavior: smooth;
 }
+
+.art_image {
+    width: 100px; height: 100px;
+    background-size: 250px; background-size: cover;   
+}
+
+.art_image.lazy {
+    background-image: none;
+    background: #fff;
+}
