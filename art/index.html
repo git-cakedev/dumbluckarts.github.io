@@ -37,23 +37,74 @@
                 <a style="font-size: 16pt;" href="/music/">music</a>
             </div> <br/>
             <div id="art_content">
-                <img width="150px" src="/images/art/eyeguy.png"/>
-                <img width="150px" src="/images/art/fire.png"/>
-                <img width="150px" src="/images/art/mannybathroom.jpg"/>
-                <img width="150px" src="/images/art/mannyold.jpg"/>
-                <img width="150px" src="/images/art/monsterhead_1.png"/>
-                <img width="150px" src="/images/art/plant_head.png"/>
-                <img width="150px" src="/images/art/profpic.png"/>
-                <img width="150px" src="/images/art/shmokin.png"/>
-                <img width="150px" src="/images/art/skull.png"/>
-                <img width="150px" src="/images/art/snailer.png"/>
-                <img width="150px" src="/images/art/truck.png"/>
-                <img width="150px" src="/images/art/walk_cycle.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/eyeguy.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/fire.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/mannybathroom.jpg"/>
+                <img class="lazy" width="150px" data-src="/images/art/mannyold.jpg"/>
+                <img class="lazy" width="150px" data-src="/images/art/monsterhead_1.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/plant_head.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/profpic.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/shmokin.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/skull.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/snailer.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/truck.png"/>
+                <img class="lazy" width="150px" data-src="/images/art/walk_cycle.png"/>
             </div>
             <footer>
                 <p>we're hosted by <a href="https://github.com/dumbluckarts/projects">github</a>! We love those guys and appreciate everything they do.</p>
                 <p>copyright &copy; 2019 dumbluckarts all right reserved.</p>
             </footer>
         </center></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            var lazyloadImages;    
+
+            if ("IntersectionObserver" in window) {
+            lazyloadImages = document.querySelectorAll(".lazy");
+            var imageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+            var image = entry.target;
+            image.src = image.dataset.src;
+            image.classList.remove("lazy");
+            imageObserver.unobserve(image);
+            }
+            });
+            });
+
+            lazyloadImages.forEach(function(image) {
+            imageObserver.observe(image);
+            });
+            } else {  
+            var lazyloadThrottleTimeout;
+            lazyloadImages = document.querySelectorAll(".lazy");
+
+            function lazyload () {
+            if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+            }    
+
+            lazyloadThrottleTimeout = setTimeout(function() {
+            var scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+            });
+            if(lazyloadImages.length == 0) { 
+            document.removeEventListener("scroll", lazyload);
+            window.removeEventListener("resize", lazyload);
+            window.removeEventListener("orientationChange", lazyload);
+            }
+            }, 20);
+            }
+
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
+            }
+            })
+        </script>
     </body>
 </html>
