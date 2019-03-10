@@ -1,38 +1,42 @@
 <!doctype html>
 <html>
-    <style>
-        .menu_content {
-            padding-top: 200px;
-        }
-        .logo_container {
-            width: 250px; height: 250px;
-            background: url('/images/dla_logo_v1.svg') no-repeat;
-            background-size: contain;
-            background-position: center;
-            background-size: 600px;
-            background-attachment: scroll;
-            border-radius: 25px;
-        }
-        .menu_text a{
-            font-family: 'Indie Flower';
-            font-size: 18pt;
-            font-weight: 300;
-            text-decoration: none;
-            color: purple;
-            padding: 5px;
-        }
-    </style>
+  <style>
+    .menu_container {
+      display: block;
+      zoom: 120%;
+    }
 
-    <body>
-        <div class="menu_content">
-            <div class="logo_container"></div>
-            <div class="menu_text">
-                <a style="font-size: 16pt;" href="/index.html"><strike>home</strike></a>
-                <a style="font-size: 16pt;" href="/us/">us</a>
-                <a style="font-size: 16pt;" href="/content/games/">games</a>
-                <a style="font-size: 16pt;" href="/content/art/">art</a>
-                <a style="font-size: 16pt;" href="/content/music/">music</a>
-            </div>
-        </div>
-    </body>
+    .menu_text a{
+      font-family: 'Indie Flower';
+      font-size; 18pt;
+      font-weight: 300;
+      text-decoration: none;
+      color: #fff;
+      padding: 5px;
+    }
+
+    #dla_logo {
+      width: 250px; height: 300px;
+      background: url('/images/dlalogo.svg') no-repeat;
+      background-size: 320px;
+      background-position: center;
+      background-attachment: scroll;
+      max-width: 100vw; max-height: 100vh;
+    }
+
+  </style>
+  <body>
+    <div class="flex_container">
+      <div class="menu_container">
+      <div id="dla_logo"></div>
+      <div class="menu_text">
+        <a id="home" style="font-size: 16pt;" href="/index.html">home</a>
+        <a id="about-us" style="font-size: 16pt;" href="/us/">us</a>
+        <a id="games" style="font-size: 16pt;" href="/content/games/">games</a>
+        <a id="art"style="font-size: 16pt;" href="/content/art/">art</a>
+        <a id="music" style="font-size: 16pt;" href="/content/music/">music</a>
+      </div>
+    </div>
+    </div>
+  </body>
 </html>
