@@ -54,23 +54,3 @@ p, a, h1, h2, h3, h4 {
 .ofix {
   overflow-x: hidden;
 }
-
-.text_align_center {
-  text-align: center;
-}
-
-.margin_auto {
-  margin: auto;
-}
-
-.filter_text_white {
-
-}
-
-#moon {
-  z-index: -1;
-}
-
-.zoomout {
-  zoom: 80%;
-}
