@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<style>
+		/* TODO add container for footer */
+		/* TODO add container for buttons */
+		/* TODO add container for text content  */
+		.footer_container {
+			margin: 0; padding: 0;
+			width: 100vw; height: 200px;
+			background: #282828;
+		}
+		.footer_text_content {
+				margin: 0; padding: 0;
+				width: max-content;
+				display: inline-block;
+				color: var(--white);
+				font-family: 'Open sans';
+				font-weight: 200;
+		}
+		.footer_text_content p {
+			color: var(--white);
+			font-familt: var(--secondary-font);
+			font-size: 10pt;
+		}
+		#useful-links {
+			display: block;
+			margin: 0 auto;
+		}
+		#useful-links img{
+			margin: 5px;
+			transition: all 0.25s ease;
+		}
+		#useful-links img:hover {
+			filter: invert(57%) sepia(40%) saturate(0%) hue-rotate(279deg) brightness(91%) contrast(85%);
+			transition: all 0.25s ease;
+		}
+		#copyright {
+			width: 140px; height: 100%;
+			margin: 0;
+			margin-right: 5px;
+		}
+		#footer-contact-button {
+			height: 50px;
+			display: block;
+			margin: auto;
+			outline: 0;
+			background: transparent;
+			color: var(--white);
+			border: 2px solid var(--white);
+			font-weight: 200;
+			border-radius: 2px;
+			margin-left: 5px;
+			border-bottom: 5px solid var(--white);
+			transition: all 0.25s ease;
+		}
+		#footer-contact-button:hover {
+			border-bottom: 2px solid var(--white);
+			transition: all 0.25s ease;
+		}
+	</style>
+	<!-- nelson.m nelsontron@hotmail.com -->
+	<body>
+		<div class="footer_container n_display_flex n_justify_center n_align_center n_position_relative n_overflow_fix n_flex_direction_col">
+				<div id="useful-links">
+					<div class="tooltip">
+						<span class="tooltiptext tooltiptop">github</span>
+						<a class="" href="https://github.com/dumbluckarts/projects" target="_blank"><img class="filter_text_white" src="/resources/images/icons/github.svg"/></a>
+					</div>
+					<div class="tooltip">
+						<span class="tooltiptext tooltiptop">twitter</span>
+						<a href="https://twitter.com/INoahFella" target="_blank"><img class="filter_text_white" src="/resources/images/icons/twitter.svg"/></a>
+					</div>
+					<div class="tooltip">
+						<span class="tooltiptext tooltiptop">twitch</span>
+						<a href="https://www.twitch.tv/inoahlad" target="_blank"><img class="filter_text_white" src="/resources/images/icons/twitch.svg"/></a>
+					</div>
+					<div class="tooltip">
+						<span class="tooltiptext tooltiptop">instagram</span>
+						<a href="https://www.instagram.com/nelsonm7/" target="_blank"><img class="filter_text_white" src="/resources/images/icons/instagram.svg"/></a>
+					</div>
+				</div>
+				<div class="n_display_grid">
+					<div class="footer_text_content n_row2 n_col1">
+						<p id="copyright">&copy; copyright 2019 dumbluckarts. All rights reserved.</p>
+					</div>
+					<div class="n_row2 n_col2 n_position_relative">
+						<button id="footer-contact-button">contact</button>
+					</div>
+				</div>
+		</div>
+		<script>
+			$('.icon_white').mouseenter(function(e){
+
+			});
+		</script>
+	</body>
+</html>

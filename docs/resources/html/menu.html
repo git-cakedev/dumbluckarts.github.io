@@ -2,41 +2,52 @@
 <html>
 	<head>
 		<style>
-			#menu-content {
+			/* TODO add container for menu */
+			.menu_container {
+				margin: 0; padding: 0;
 				display: block;
+				zoom: 1.2;
 			}
-
-			#menu-selection {
+			/* TODO add cosntainer for textarea */
+			.menu_text_container {
+				margin: 0 auto; padding: 0;
 				width: auto; height: auto;
-				list-style: none;
-				display: block;
-				margin: auto;
-			}
-			#menu-selection a,li {
 				display: inline-block;
+			}
+			.menu_text_container a {
+				width: max-content;
+				margin: auto;
+				padding: 5px;
 				font-family: var(--secondary-font);
 				font-size: 18pt;
 				text-decoration: none;
-				padding: 0;
+				color: var(--white);
+				transition: all 0.25s ease;
 			}
-			#menu-logo {
-				width: auto; height: auto;
-				background: url('/docs/resources/images/logos/dlalogo.svg');
-				margin: auto;
+			.menu_text_container a:hover {
+				color: #fa7268;
+				transition: all 0.25s ease;
+			}
+			/* TODO add container for logoimage */
+			.menu_logo_container {
+				margin: auto; padding: 0;
+				width: 250px; height: 280px;
+				background: url('resources/images/logos/dlalogo.svg'), no-repeat;
+				background-size: cover;
+				display: block;
+				background-position: center;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="menu-content">
-			<div class="n_display_inline_block">
-				<img id="menu-logo" src="\resources\images\logos\dlalogo.svg"/>
-				<ul id="menu-selection" class="n_display_block">
-					<li><a href="/docs/">home</a></li>
-					<li><a href="/docs/us/">us</a></li>
-					<li><a href="/docs/games/">games</a></li>
-					<li><a href="/docs/art/">art</a></li>
-					<li><a href="/docs/music/">music</a></li>
-				</ul>
+		<div class="menu_container n_display_flex n_justify_center n_align_center">
+			<div class="menu_logo_container noselect"></div>
+			<div class="menu_text_container noselect">
+				<a href="">home</a>
+				<a href="">us</a>
+				<a hef="">games</a>
+				<a href-"">art</a>
+				<a href="">music</a>
 			</div>
 		</div>
 	</body>
