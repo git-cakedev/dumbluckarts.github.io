@@ -1,2 +1,2 @@
-# dumbluckarts.github.io
-dumbluckarts github io respository. Contains all website files.
+main website files for dumbluckarts.com. Includes all open source code. Use at
+your will.
