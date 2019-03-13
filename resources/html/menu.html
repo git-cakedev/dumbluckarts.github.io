@@ -6,7 +6,6 @@
 			.menu_container {
 				margin: 0; padding: 0;
 				display: block;
-				zoom: 1.2;
 			}
 			/* TODO add cosntainer for textarea */
 			.menu_text_container {
@@ -46,9 +45,21 @@
 				<a href="">home</a>
 				<a href="">us</a>
 				<a hef="">games</a>
-				<a href-"">art</a>
+				<a href="">art</a>
 				<a href="">music</a>
 			</div>
 		</div>
+		<script>
+		// resize logo on resize
+			$( window ).on("load resize orientationchange", function(event) {
+				var width = $(window).width();
+				var height = $(window).height();
+				if ((width >=700)) {
+					$('.menu_container').css('zoom', '1.25');
+				} else {
+					$('.menu_container').css('zoom', '0.9');
+				}
+			});
+		</script>
 	</body>
 </html>

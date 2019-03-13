@@ -37,7 +37,8 @@
 			#under-development {
 				width: 100%; height: auto;
 				margin: 0; padding: 0;
-				top: 0; left: 0;
+				bottom: 0; left: 0;
+				background: var(--gray);
 				transition: all 0.25s ease;
 			}
 			#under-development img {
@@ -58,12 +59,12 @@
 	</head>
 	<!-- nelson.m nelsontron@hotmail.com -->
 	<body>
-		<div class="n_display_flex n_fullscreen_box n_justify_center n_align_center n_position_relative n_max_fullscreen n_overflow_fix" style="overflow-y: hidden;">
+		<div id="main-home-content" class="n_display_flex n_fullscreen_box n_justify_center n_align_center n_position_relative n_max_fullscreen n_overflow_fix" style="overflow-y: hidden;">
 
 			<!-- under development box at top of screen. Not gonna be here forever -->
 			<div id="under-development" class="n_position_fixed n_display_flex n_align_center n_justify_center noselect">
-				<img class="filter_text_white noselect" src="/resources/images/icons/warning.svg">
-				<h1 class="noselect">our website is currently under development.</h1>
+				<img class="filter_text_red noselect" src="/resources/images/icons/warning.svg">
+				<h1 class="noselect">our websites not finished yet! Content unavailable.</h1>
 			</div>
 			<!-- finish under development box at top of screen. -->
 
@@ -86,6 +87,16 @@
 				$('#ip_menubar_html').load('resources/html/menu.html');
 				$('#ip_font_html').load('resources/html/fonts.html');
 				$('#ip_footer_html').load('resources/html/footer.html');
+
+				$( window ).on("load resize orientationchange", function(event) {
+					var width = $(this).width();
+					var height = $(this).height();
+					if ((height <= 450)) {
+						$('#under-development').hide();
+					} else {
+						$('#under-development').show();
+					}
+				});
 
 				// remove under development on click.
 				$('#under-development').click(function() {

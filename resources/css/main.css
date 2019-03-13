@@ -10,6 +10,7 @@
 /* fix overflow on elements that might be too big due to padding or animation. */
 .filter_text_black {filter: filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(275deg) brightness(103%) contrast(109%);}
 .filter_text_white {filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(182deg) brightness(105%) contrast(105%);}
+.filter_text_red {filter: invert(60%) sepia(5%) saturate(5106%) hue-rotate(315deg) brightness(94%) contrast(110%);}
 /* noselect class */
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -78,6 +79,10 @@
 .n_flex_direction_row {
 	flex-direction: row;
 }
+.n_text_align_center {
+	text-align: center;
+}
+
 /* end snippet n_webshell code snippet for basic web design commands */
 
 
@@ -90,6 +95,7 @@
 	--font-size: 14pt;
 	--white: #fff;
 	--black: #000;
+	--gray: #282828;
 }
 
 html *
