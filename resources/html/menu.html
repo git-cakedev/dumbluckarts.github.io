@@ -3,15 +3,25 @@
 	<head>
 		<style>
 			/* TODO add container for menu */
-			.menu_container {
+			#menu_container {
 				margin: 0; padding: 0;
 				display: block;
+				transition: all 0.25s ease;
 			}
 			/* TODO add cosntainer for textarea */
 			.menu_text_container {
 				margin: 0 auto; padding: 0;
 				width: auto; height: auto;
 				display: inline-block;
+			}
+			.menu_text_container p {
+				width: max-content;
+				margin: auto;
+				padding: 5px;
+				font-family: var(--secondary-font);
+				font-size: 18pt;
+				text-decoration: none;
+				color: var(--white);
 			}
 			.menu_text_container a {
 				width: max-content;
@@ -36,30 +46,48 @@
 				display: block;
 				background-position: center;
 			}
+			.smaller {
+				transition: all 0.25s ease;
+				transform: scale(0.8, 0.8);
+			  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+			  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+			  -o-transform: scale(0.8, 0.8); /* Opera */
+			  -moz-transform: scale(0.8, 0.8); /* Firefox */
+			}
+			.bigger {
+				transition: all 0.25s ease;
+				transform: scale(1.5, 1.5);
+			  -ms-transform: scale(1.5, 1.5); /* IE 9 */
+			  -webkit-transform: scale(1.5, 1.5); /* Safari and Chrome */
+			  -o-transform: scale(1.5, 1.5); /* Opera */
+			  -moz-transform: scale(1.5, 1.5); /* Firefox */
+			}
 		</style>
 	</head>
 	<body>
-		<div class="menu_container n_display_flex n_justify_center n_align_center">
+		<div id="menu_container" class="n_display_flex n_justify_center n_align_center">
 			<div class="menu_logo_container noselect"></div>
 			<div class="menu_text_container noselect">
-				<a href="">home</a>
-				<a href="">us</a>
-				<a hef="">games</a>
-				<a href="">art</a>
+				<a href="">home</a><a>&#124;</a>
+				<a href="">us</a><a>&#124;</a>
+				<a href="">games</a><a>&#124;</a>
+				<a href="">art</a><a>&#124;</a>
 				<a href="">music</a>
 			</div>
 		</div>
 		<script>
-		// resize logo on resize
-			$( window ).on("load resize orientationchange", function(event) {
-				var width = $(window).width();
-				var height = $(window).height();
-				if (width >= 700) {
-					$('.menu_container').css('zoom', '1.25');
+			function adjustMenuSize() {
+				var vwidth = $( window ).width();
+				var menu = $( '#menu_container' );
+				if (vwidth >= 1024) {
+					menu.addClass('bigger');
+				} else if (vwidth <= 400) {
+					menu.addClass('smaller');
 				} else {
-					$('.menu_container').css('zoom', '0.9');
+					menu.removeClass('smaller');
+					menu.removeClass('bigger');
 				}
-			});
+			}
 		</script>
 	</body>
 </html>

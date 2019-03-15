@@ -3,63 +3,41 @@
 	<head>
 		<meta charset="utf-8">
 		<title id="pageTitle">dumbluckarts - free indie games, music and art</title>
-		<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-		<meta property="og:site_name" content="dumbluckarts">
+		<!-- meta property -->
+		<meta property="og:site_name" content="dumbluckarts - free games, art, music">
 		<meta property="og:url" content="https://www.dumbluckarts.com/">
 		<meta property="og:image" content="favicon path">
 		<meta property="og:locale" content="en_us">
+		<meta property="og:description" content="dumbluckarts home, play a collection
+		 of games including: puzzle, 2d, multiplayer, platforming, running, io, sports, story, strategy games and more.">
+		<!-- link rel -->
 		<link rel="canonical" href="https://www.dumbluckarts.com/">
 		<link rel="alternate" media="handheld" href="https://m.dumbluckarts.com">
 		<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.dumbluckarts.com">
 		<link rel="alternate" hreflang="x-default" href="https://www.dumbluckarts.com">
-		<meta name="description" content="dumbluckarts home page, navigate through our
-		menu options of free games, music, art, application, code, and more.">
+		<!-- meta name -->
+		<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+		<meta name="description" content="dumbluckarts home, play a collection of games
+		 including: puzzle, 2d, multiplayer, platforming, running, io, sports, story, strategy games and more.">
+		<meta name="keywords" content="free online games, unblocked games, io games,
+		 free 2 player game, dumbluckarts">
 		<meta name="robots" content="index, follow">
 		<meta name="copyright" content="&copy; copyright 2019 dumbluckarts. All rights reserved." />
+		<!-- import jquery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="/resources/scripts/jQuery.js"></script>
 		<!-- import font files -->
-		<span id="ip_font_html"></span>
+		<span id="import_fonts_html"></span>
 		<link ref="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
 		<!-- import css files -->
-		<link type="text/css" rel="stylesheet" href="resources/css/main.css">
+		<link type="text/css" rel="stylesheet" href="/resources/css/main.css">
+		<link type="text/css" rel="stylesheet" href="/resources/css/style.css">
 		<!-- import script files -->
-		<style>
-			#moon-background-video {
-				width: 100%; height: 100%;
-				position:fixed;
-				z-index: -1;
-				top: 0; left: 0;
-			}
-			#moon-background-video video {
-				min-width: 100%; min-height: 100%;
-				padding: 0; margin: 0;
-			}
-			#under-development {
-				width: 100%; height: auto;
-				margin: 0; padding: 0;
-				bottom: 0; left: 0;
-				background: var(--gray);
-				transition: all 0.25s ease;
-			}
-			#under-development img {
-				padding-left: 10px;
-				width: 20px;
-			}
-			#under-development h1 {
-				color: var(--white);
-				padding-left: 10px;
-				padding-right: 10px;
-				font-weight: 300;
-				transform: translateY(-1px);
-			}
-			#under-development:hover {
-				transition: all 0.25s ease;
-			}
-		</style>
 	</head>
 	<!-- nelson.m nelsontron@hotmail.com -->
 	<body>
-		<div id="main-home-content" class="n_display_flex n_fullscreen_box n_justify_center n_align_center n_position_relative n_max_fullscreen n_overflow_fix" style="overflow-y: hidden;">
+		<div id="main-home-content" class="n_display_flex n_fullscreen_box
+		n_justify_center n_align_center n_position_relative n_max_fullscreen n_overflow_fix" style="overflow-y: hidden;">
 
 			<!-- under development box at top of screen. Not gonna be here forever -->
 			<div id="under-development" class="n_position_fixed n_display_flex n_align_center n_justify_center noselect">
@@ -73,36 +51,20 @@
 					<source src="/resources/videos/moon.mp4" type="video/mp4"/>
 				</video>
 			</div>
-			<div id="ip_menubar_html"></div>
+			<div id="import_menu_html"></div>
 		</div>
 
 		<div id="us-content">
 		</div>
 
 		<footer>
-			<div id="ip_footer_html"></div>
+			<div id="import_footer_html"></div>
 		</footer>
-		<script type="text/javascript">
-			jQuery( document ).ready(function($) {
-				$('#ip_menubar_html').load('resources/html/menu.html');
-				$('#ip_font_html').load('resources/html/fonts.html');
-				$('#ip_footer_html').load('resources/html/footer.html');
-
-				$( window ).on("load resize orientationchange", function(event) {
-					var width = $(this).width();
-					var height = $(this).height();
-					if ((height <= 450)) {
-						$('#under-development').hide();
-					} else {
-						$('#under-development').show();
-					}
-				});
-
-				// remove under development on click.
-				$('#under-development').click(function() {
-					$(this).hide();
-				});
-			});
+		<script>
+		var udev = $( '#under-development' );
+		function toggleBottomMessage() {
+			udev.css('bottom', '-60px');
+		}
 		</script>
 	</body>
 </html>
