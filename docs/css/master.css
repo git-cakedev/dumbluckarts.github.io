@@ -1,0 +1,191 @@
+:root {
+	--primary: #FA7268;
+	--primary-light: #ffa496;
+	--primary-dark: #c2413d;
+	--secondary: #424242;
+	--secondary-light: #6d6d6d;
+	--secondary-dark: #1b1b1b;
+	--text-dark: #000;
+	--text-light: #fff;
+	--font: 'Indie Flower';
+	--font2: 'Roboto';
+	--font-size: 16pt;
+}
+
+html {
+	background: var(--secondary-dark);
+}
+
+body {
+	margin: 0; padding: 0;
+	overflow-x: hidden;
+}
+
+h2 {
+	text-decoration: none;
+	font-weight: 300;
+}
+
+a:hover {
+	color: var(--primary);
+}
+
+#loading {
+	width: 100vw; height: 100vh;
+	position: fixed;
+	background: #000;
+	color: var(--text-light);
+	font-family: var(--font2);
+	font-size: var(--font-size);
+	z-index: 10;
+}
+
+.flex_box {
+	display: flex;
+}
+
+.align_cen {
+	align-items: center;
+}
+
+.justify_cen {
+	justify-content: center;
+}
+
+.flex_col {
+	flex-direction: column;
+}
+
+.flex_row {
+	flex-direction: row;
+}
+
+.text_light {
+	color: var(--text-light);
+}
+
+.navigation_bar {
+	position: fixed;
+	width: 100vw; height: 80px;
+	background-color: var(--secondary-dark);
+	z-index: 5;
+}
+
+#nav-logo {
+	color: var(--text-light);
+	font-size: var(--font-size);
+	font-family: var(--font);
+	margin: 25px;
+	margin-left: 60px;
+	float: left;
+}
+
+#menu-button {
+	float: right;
+	margin: 25px;
+}
+
+#nav {
+	width: 100vw;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 5;
+}
+
+#nav-links {
+	width: 100vw; height: 100vh;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background: #000;
+	display: flex;
+	flex-direction: column;
+	padding-top: 80px;
+	text-align: right;
+}
+
+.nav_link {
+	color: var(--text-light);
+	font-size: var(--font-size);
+	font-family: var(--font);
+	float: right;
+	margin: 5px 25px;
+	display: block;
+}
+
+.header-container {
+	display: flex;
+}
+
+#moon-container {
+	width: 100vw; height: 648px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+#menu-header-content {
+	z-index: 1;
+}
+
+#moon-video {
+	position: absolute;
+	min-width: 100%; min-height: 100%;
+	z-index: 0;
+}
+
+#dla-logo {
+	width: 150px;
+	padding-right: 20px;
+	z-index: 1;
+}
+
+#menu-buttons {
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+
+.menu-link {
+	color: var(--text-light);
+	font-size: var(--font-size);
+	font-family: var(--font);
+}
+
+.footer_container {
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer_link {
+	padding: 5px;
+}
+
+#legal {
+	width: 200px;
+	color: var(--text-light);
+	font-family: var(--font2);
+	font-size: 12pt;
+	margin: 5px; padding: 0;
+}
+
+.contact_button {
+	margin: 5px;
+	width: max-content; height: max-content;
+	color: var(--text-light);
+	font-family: var(--font2);
+	font-size: 12pt;
+	padding: 15px;
+	border-bottom: 2px solid #fff;
+	transition: all 0.1s ease;
+}
+
+.contact_button:hover {
+	border-bottom: 0;
+	transform: translateY(2px);
+	transition: all 0.1s ease;
+}
