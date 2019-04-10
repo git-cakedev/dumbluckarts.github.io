@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cale's Resume</title>
+		<style media="screen" >
+			:root {
+				--font: 'Fascinate Inline', cursive;
+			}
+
+			body {
+				margin: 0; padding: 0;
+			}
+
+			.flex_box {
+				display: flex;
+			}
+
+			.align_vert {
+				align-items: center;
+			}
+
+			.menu_bar {
+				width: 100vw; height: 60px;
+				background: #000;
+        position: fixed;
+				z-index: 10;
+			}
+			#logo {
+				font-size: 18pt;
+				font-weight: 200;
+			}
+
+
+
+			.menu_bar_link {
+				color: #fff;
+				padding: 25px;
+				text-decoration: none;
+				font-size: 16pt;
+				transition: all 0.25s ease;
+			}
+
+			.menu_bar_link:hover {
+				color: red;
+				transition: all 0.25s ease;
+			}
+
+			.font {
+				font-family: var(--font);
+			}
+
+			.image_header {
+				padding-top: 60px;
+				width: 100vw; height: 300px;
+				position: relative;
+				overflow: hidden;
+			}
+
+			#header-image {
+				min-width: 100%; min-height: 100%;
+				position: absolute;
+				z-index: -1;
+				top: -170px;
+				left: 0; right: 0;
+			}
+
+			.about_header {
+
+			}
+
+			.contact_header {
+
+			}
+		</style>
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="main-content">
+			<!-- TODO: menu bar -->
+			<div class="menu_bar flex_box align_vert">
+				<!-- TODO: logo -->
+				<!-- TODO: links to all headers -->
+				<a id="logo" class="menu_bar_link font" href="#top">Cale Maynes</a>
+				<a class="menu_bar_link font" href="#about">About</a>
+				<a class="menu_bar_link font" href="#contact">Contact</a>
+			</div>
+
+			<!-- TODO: image header -->
+			<a href="https://web.archive.org/web/20120418130915/http://www.ricardomilos.net:80/home.html"><div class="image_header">
+					<img id="header-image" src="https://i.ytimg.com/vi/ziHqVzQsOUM/maxresdefault.jpg">
+			</div></a>
+
+			<!-- TODO: about -->
+      <div id="about">
+
+      </div>
+			<!-- TODO: contact -->
+			<div id="contact">
+
+			</div>
+    </div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			jQuery( document ).ready( function() {
+			});
+		</script>
+  </body>
+</html>

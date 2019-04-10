@@ -1,16 +1,31 @@
 :root {
-	--primary: #FA7268;
-	--primary-light: #ffa496;
-	--primary-dark: #c2413d;
+	--primary: #e93a3a;
+	--primary-light: #ff7165;
+	--primary-dark: #af0013;
 	--secondary: #424242;
 	--secondary-light: #6d6d6d;
 	--secondary-dark: #1b1b1b;
 	--text-dark: #000;
 	--text-light: #fff;
-	--font: 'Indie Flower';
-	--font2: 'Roboto';
-	--font-size: 16pt;
+	--font: 'Manuale', serif;
+	--font2: 'Bitter', serif;
+	--font-size: 14pt;
+	--font-mid: 16pt;
 }
+
+.hideme {
+	opacity: 0;
+}
+
+::-webkit-scrollbar {width: 6px;height: 6px;}
+::-webkit-scrollbar-button {width: 0px;height: 0px;}
+::-webkit-scrollbar-thumb {background: #e1e1e1;border: 0px none #ffffff;border-radius: 0px;}
+::-webkit-scrollbar-thumb:hover {background: #ffffff;}
+::-webkit-scrollbar-thumb:active {background: #1b1b1b;}
+::-webkit-scrollbar-track {background: #666666;border: 0px none #ffffff;border-radius: 0px;}
+::-webkit-scrollbar-track:hover {background: #666666;}
+::-webkit-scrollbar-track:active {background: #333333;}
+::-webkit-scrollbar-corner {background: transparent;}
 
 html {
 	background: var(--secondary-dark);
@@ -21,9 +36,15 @@ body {
 	overflow-x: hidden;
 }
 
-h2 {
+h1,h2,h3,h4,h5,h6 {
 	text-decoration: none;
 	font-weight: 300;
+}
+
+p {
+	font-size: 12pt;
+	font-family: 'Roboto';
+	font-weight: 200;
 }
 
 a:hover {
@@ -73,8 +94,8 @@ a:hover {
 
 #nav-logo {
 	color: var(--text-light);
-	font-size: var(--font-size);
-	font-family: var(--font);
+	font-size: var(--font-mid);
+	font-family: var(--font2);
 	margin: 25px;
 	margin-left: 60px;
 	float: left;
@@ -107,15 +128,15 @@ a:hover {
 
 .nav_link {
 	color: var(--text-light);
-	font-size: var(--font-size);
+	font-size: var(--font-mid);
 	font-family: var(--font);
 	float: right;
 	margin: 5px 25px;
 	display: block;
 }
 
-.header-container {
-	display: flex;
+.header_container {
+	padding: 60px;
 }
 
 #moon-container {
@@ -151,14 +172,60 @@ a:hover {
 
 .menu-link {
 	color: var(--text-light);
-	font-size: var(--font-size);
+	font-size: 16pt;
 	font-family: var(--font);
+	padding: 2px;
+}
+
+.games_button {
+	padding: 15px 20px;
+	background: var(--primary);
+	color: var(--text-light);
+	font-size: 10pt;
+	border-radius: 5px;
+}
+
+.games_button:hover {
+	color: var(--text-light);
+	background: var(--primary-dark);
+}
+
+.games_button2 {
+	padding: 15px 20px;
+	background: #1565c0;
+	color: var(--text-light);
+	font-size: 10pt;
+	border-radius: 5px;
+}
+
+.games_button2:hover {
+	color: var(--text-light);
+	background: #003c8f;
+}
+
+.twitch_button {
+	padding: 15px 20px;
+	background: #9c27b0;
+	color: var(--text-light);
+	font-size: 10pt;
+	border-radius: 5px;
+}
+
+.twitch_button:hover {
+	color: var(--text-light);
+	background: #6a0080;
+}
+
+#game-preview {
+	height: 600px;
+	border-radius: 25px;
 }
 
 .footer_container {
 	height: 150px;
 	display: flex;
 	flex-direction: column;
+	padding-top: 60px;
 }
 
 .footer_link {
@@ -168,7 +235,7 @@ a:hover {
 #legal {
 	width: 200px;
 	color: var(--text-light);
-	font-family: var(--font2);
+	font-family: var(--font);
 	font-size: 12pt;
 	margin: 5px; padding: 0;
 }
@@ -178,7 +245,7 @@ a:hover {
 	width: max-content; height: max-content;
 	color: var(--text-light);
 	font-family: var(--font2);
-	font-size: 12pt;
+	font-size: 10pt;
 	padding: 15px;
 	border-bottom: 2px solid #fff;
 	transition: all 0.1s ease;

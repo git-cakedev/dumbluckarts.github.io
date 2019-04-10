@@ -3,7 +3,9 @@ jQuery( document ).ready(function() {
 
 	checkWidth();
 
-	$( window ).on('resize orientationchange', function() {
+	let $window = $(window);
+
+	$window.on('resize orientationchange', function() {
 		checkWidth();
 	});
 
@@ -11,8 +13,12 @@ jQuery( document ).ready(function() {
 		$( '#nav-links' ).toggle();
 	});
 
+	checkIfHidemeOnScreen();
+
 	$( document ).on('scroll', function() {
-		if ($( window ).scrollTop() <= 632) {
+		checkIfHidemeOnScreen();
+
+		if ($window.scrollTop() <= 432) {
 			$( '.navigation_bar' ).fadeOut();
 			$( '#nav-links' ).is(':visible') ? $( '#nav-links' ).fadeOut() : null;
 		} else {
@@ -34,7 +40,32 @@ $( window ).on( 'load', function() {
 function checkWidth() {
 	if ( $( window ).width() < 700) {
 		$( '#about-us' ).css('flex-direction', 'column');
+		$( '#we-love-games' ).css('overflow-x', 'auto');
 	} else {
 		$( '#about-us' ).css('flex-direction', 'row');
+		$( '#we-love-games' ).css('overflow-x', 'hidden');
 	}
+}
+
+function toggleNavLinks() {
+	$( '#burger-menu' ).on('click', function() {
+		$( '#nav-links' ).toggle();
+	});
+}
+
+function checkIfHidemeOnScreen() {
+	/* Check the location of each desired element */
+  $('.hideme').each( function(i){
+
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+      /* If the object is completely visible in the window, fade it it */
+      if( bottom_of_window > bottom_of_object ){
+
+          $(this).animate({'opacity':'1'},500);
+
+      }
+
+  });
 }

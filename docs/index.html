@@ -2,62 +2,237 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>dumbluckarts home</title>
-	<link rel="stylesheet" href="css/master.css">
-	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Manuale|Roboto" rel="stylesheet">
+	<style media="screen">
+
+	body {
+		margin: 0;
+	}
+
+	:root {
+		--primary: #e93a3a;
+		--primary-light: #ff7165;
+		--primary-dark: #af0013;
+		--secondary: #424242;
+		--secondary-light: #6d6d6d;
+		--secondary-dark: #1b1b1b;
+		--font-header: 'Manuale', serif;
+		--font-button: 'Bitter', serif;
+		--font-paragraph: 'Roboto';
+		--font-small: 14pt;
+		--font-mid: 16pt;
+		--font-large: 18pt;
+	}
+
+	/* custom scrollbar snippet code  */
+	::-webkit-scrollbar {width: 6px;height: 6px;}
+	::-webkit-scrollbar-button {width: 0px;height: 0px;}
+	::-webkit-scrollbar-thumb {background: #e1e1e1;border: 0px none #ffffff;border-radius: 0px;}
+	::-webkit-scrollbar-thumb:hover {background: #ffffff;}
+	::-webkit-scrollbar-thumb:active {background: #1b1b1b;}
+	::-webkit-scrollbar-track {background: #666666;border: 0px none #ffffff;border-radius: 0px;}
+	::-webkit-scrollbar-track:hover {background: #666666;}
+	::-webkit-scrollbar-track:active {background: #333333;}
+	::-webkit-scrollbar-corner {background: transparent;}
+	/* end custom scrollbar snippet code */
+
+	/* format text */
+	.format_paragraph {
+		font-family: var(--font-paragraph);
+		font-size: var(--font-small);
+		text-decoration: none;
+		font-weight: 300;
+	}
+
+	.format_header {
+		font-family: var(--font-header);
+		text-decoration: none;
+		font-weight: 300;
+	}
+
+	.format_link {
+		font-family: var(--font-paragraph);
+		font-size: var(--font-small);
+		text-decoration: none;
+		font-weight: 300;
+	}
+
+	.format_link:hover {
+		color: var(--primary);
+	}
+	/* end format text */
+
+	/* primary color button with contrast text */
+	.contrast_button_primary {
+		background: var(--primary);
+		color: #fff;
+	}
+
+	.contrast_button_primary:hover {
+		background: var(--primary-dark);
+	}
+	/* end primary color button */
+
+	.loading_screen {
+		position: fixed;
+		background: #000;
+		color: #fff;
+		font-family: var(--font-paragraph);
+		font-size: var(--font-small);
+		z-index: 10;
+	}
+
+	/* flex box */
+	.flex_box {
+		display: flex;
+	}
+
+	.alignc {
+		align-items: center;
+	}
+
+	.justifyc {
+		justify-content: center;
+	}
+	/* end flex box */
+
+	.fullscreen_box {
+		width: 100vw; height: 100vh;
+	}
+
+	</style>
 </head>
 <body>
-	<div id="loading" class="flex_box align_cen justify_cen">
-		<img src="img/dlalogo.svg" width="100px"/>
+
+	<!-- start loading screen -->
+	<div class="loading_screen fullscreen_box flex_box alignc justifyc ">
+		<img src="img/dlalogo.svg" width="100px" alt="img/dlalogo.png">
 		<p>🄻🄾🄰🄳🄸🄽🄶...</p>
+	</div>
+	<!-- end loading screen -->
+
+	<div class="main_content">
+
+		<!-- start navigation bar -->
+		<div class="nagivation_bar">
+			<!-- TODO: dynamic changing page header name after logo -->
+			<!-- TODO: hamburger menu that opens menu that looks like grid -->
+			<!-- TODO: menu links -->
+			<!-- TODO: show contact, twitch, and twitter button -->
+			<!-- TODO: change dynamic page header name to "menu" -->
+		</div>
+		<!-- end navigation bar -->
+
+		<!-- start video header with menu -->
+		<div class="flex_box align_cen justify_cen">
+			<!-- TODO: add background video -->
+			<!-- TODO: menu logo -->
+			<!-- TODO: menu links -->
+		</div>
+		<!-- end video header with menu  -->
+
+		<!-- start footer content -->
+		<div class="flex_box align_cen justify_cen">
+			<!-- TODO: contact button -->
+			<!-- TODO: Copyright notice -->
+			<!-- TODO: twitch, twitter, github icon with tooltips link -->
+			<!-- TODO: back to top button -->
+			<!-- TODO: donate button -->
+		</div>
+		<!-- end footer content -->
+
+		<!-- import script and add jquery library -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+		<script src="script/dumb.luck.js" charset="utf-8"></script>
+		<!-- end import script and add jquery library -->
+
 	</div>
 
 	<div id="main-content">
 		<div class="navigation_bar">
 			<div id="nav">
-				<a id="nav-logo" href="#">&nbsp;&nbsp;ᴅʟᴀ ⋫ ʜᴏᴍᴇ</a>
-				<a id="burger-menu" class="nav_link" style="margin: 25px; margin-right: 60px;">&nbsp;&nbsp;☰</a>
-				<a class="nav_link" style="margin: 25px 0px;">➫</a>
+				<a id="nav-logo" href="#">&nbsp;&nbsp;DLA <img src="img/homeicon.svg" /> <i id="page-indicator">HOME</i></a>
+				<a id="burger-menu" class="nav_link" style="margin: 25px; margin-right: 5vw;">&nbsp;&nbsp;➫ ☰</a>
 			</div>
 
 			<div id="nav-links">
-				<a class="nav_link" href="https://google.com">&nbsp;&nbsp; ɢᴀᴍᴇꜱ <img src="img/gamesicon.svg" /></a>
-				<a class="nav_link" href="#">&nbsp;&nbsp; ᴀʀᴛ <img src="img/articon.svg" /></a>
-				<a class="nav_link" href="#">&nbsp;&nbsp; ᴍᴜꜱɪᴄ <img src="img/musicicon.svg" /></a>
-				<a class="nav_link" href="#">&nbsp;&nbsp; ᴜꜱ <img src="img/usicon.svg" /></a>
+				<a class="nav_link" href="https://google.com">&nbsp;&nbsp; GAMES <img src="img/gamesicon.svg" /></a>
+				<a class="nav_link" href="#">&nbsp;&nbsp; ART <img src="img/articon.svg" /></a>
+				<a class="nav_link" href="#">&nbsp;&nbsp; MUSIC <img src="img/musicicon.svg" /></a>
+				<a class="nav_link" href="#">&nbsp;&nbsp; US <img src="img/usicon.svg" /></a>
 			</div>
 		</div>
-		<div id="moon-container" class="header-container">
+		<div id="moon-container" class="flex_box align_cen justify_cen">
 			<video id="moon-video" autoplay muted loop>
 				<source src="img/moon.mp4" type="video/mp4" />
 			</video>
 				<img id="dla-logo" src="img/dlalogo.svg" />
 				<div id="menu-buttons">
-					<a class="menu-link" href="#">ᴅʟᴀ ⋫ ʜᴏᴍᴇ</a>
-					<a class="menu-link" href="https://google.com">&nbsp;&nbsp; ɢᴀᴍᴇꜱ <img src="img/gamesicon.svg" /></a>
-					<a class="menu-link" href="#">&nbsp;&nbsp; ᴀʀᴛ <img src="img/articon.svg" /></a>
-					<a class="menu-link" href="#">&nbsp;&nbsp; ᴍᴜꜱɪᴄ <img src="img/musicicon.svg" /></a>
-					<a class="menu-link" href="#">&nbsp;&nbsp; ᴜꜱ <img src="img/usicon.svg" /></a>
+					<a class="menu-link" href="#">DLA <img src="img/homeicon.svg" /> HOME</a>
+					<a class="menu-link" href="https://google.com">&nbsp;&nbsp; GAMES <img src="img/gamesicon.svg" /></a>
+					<a class="menu-link" href="#">&nbsp;&nbsp; ART <img src="img/articon.svg" /></a>
+					<a class="menu-link" href="#">&nbsp;&nbsp; MUSIC <img src="img/musicicon.svg" /></a>
+					<a class="menu-link" href="#">&nbsp;&nbsp; US <img src="img/usicon.svg" /></a>
 				</div>
 		</div>
-		<div class="header-container flex_box align_cen justify_cen" style="padding: 60px 0px;">
+
+		<div class="flex_box align_cen justify_cen" style="padding-top: 60px">
+			<div class="text_light hideme">
+				<h2><u>ABOUT US</u></h2>
+			</div>
+		</div>
+
+		<div class="header_container flex_box align_cen justify_cen">
 			<div id="about-us" class="flex_box align_cen justify_cen">
-				<img src="img/bubbles.svg" alt="" width="280px" style="padding: 25px">
-				<div class="text_light" style="width: 320px;">
-					<h2><u>ᴀʙᴏᴜᴛ ᴜꜱ</u></h2>
-					<p>ʟᴇᴄᴛᴜꜱ ᴀʀᴄᴜ ʙɪʙᴇɴᴅᴜᴍ ᴀᴛ ᴠᴀʀɪᴜꜱ ᴠᴇʟ ᴘʜᴀʀᴇᴛʀᴀ ᴠᴇʟ. ʟᴀᴄᴜꜱ ʟᴀᴏʀᴇᴇᴛ ɴᴏɴ
-						ᴄᴜʀᴀʙɪᴛᴜʀ ɢʀᴀᴠɪᴅᴀ ᴀʀᴄᴜ ᴀᴄ ᴛᴏʀᴛᴏʀ. ꜰᴇʟɪꜱ ᴇɢᴇᴛ ɴᴜɴᴄ ʟᴏʙᴏʀᴛɪꜱ ᴍᴀᴛᴛɪꜱ
-						ᴀʟɪQᴜᴀᴍ ꜰᴀᴜᴄɪʙᴜꜱ. ᴄᴜʀꜱᴜꜱ ᴇᴜɪꜱᴍᴏᴅ Qᴜɪꜱ ᴠɪᴠᴇʀʀᴀ ɴɪʙʜ ᴄʀᴀꜱ. ᴄᴏɴꜱᴇQᴜᴀᴛ
-						ɪɴᴛᴇʀᴅᴜᴍ ᴠᴀʀɪᴜꜱ ꜱɪᴛ ᴀᴍᴇᴛ ᴍᴀᴛᴛɪꜱ ᴠᴜʟᴘᴜᴛᴀᴛᴇ ᴇɴɪᴍ.</p>
-					<p>ᴍᴀꜱꜱᴀ ᴛɪɴᴄɪᴅᴜɴᴛ ᴅᴜɪ ᴜᴛ ᴏʀɴᴀʀᴇ ʟᴇᴄᴛᴜꜱ ꜱɪᴛ ᴀᴍᴇᴛ ᴇꜱᴛ. ᴇʟᴇɪꜰᴇɴᴅ Qᴜᴀᴍ
-						ᴀᴅɪᴘɪꜱᴄɪɴɢ ᴠɪᴛᴀᴇ ᴘʀᴏɪɴ ꜱᴀɢɪᴛᴛɪꜱ ɴɪꜱʟ ʀʜᴏɴᴄᴜꜱ ᴍᴀᴛᴛɪꜱ. Qᴜɪꜱ ᴠɪᴠᴇʀʀᴀ ɴɪʙʜ
-						ᴄʀᴀꜱ ᴘᴜʟᴠɪɴᴀʀ ᴍᴀᴛᴛɪꜱ ɴᴜɴᴄ ꜱᴇᴅ ʙʟᴀɴᴅɪᴛ ʟɪʙᴇʀᴏ. ᴘʀᴀᴇꜱᴇɴᴛ ꜱᴇᴍᴘᴇʀ
-						ꜰᴇᴜɢɪᴀᴛ ɴɪʙʜ ꜱᴇᴅ ᴘᴜʟᴠɪɴᴀʀ ᴘʀᴏɪɴ ɢʀᴀᴠɪᴅᴀ.</p>
+				<img class="hideme" src="img/bubbles.svg" alt="" width="340px" style="padding: 25px">
+				<div class="text_light hideme" style="width: 340px;">
+					<h3><u>WHO'S 'WE?'.</u></h3>
+					<p>We’re dumb luck arts. Aptly named, dumbluckarts, or dla is a small
+					indie new media and design development studio owned and operated by
+					a group of dudes who wanna make games. Based in Calgary, AB,
+					we love making games because we love playing games. Each of us
+					have had our lives impacted by other peoples video game creations.
+					Each of us have had the dream to make something someone else will
+					love. Each of us love making games because of it.</p>
+					<a class="games_button" href="#" style="float: left">SEE MEMBER(S) <img src="img/membersicon.svg" /></a>
 				</div>
 			</div>
 		</div>
+
+		<div id="we-love-games" class="flex_box" style="width: auto; margin: 0; padding-bottom: 25px;">
+			<div class="flex_box align_cen justify_cen">
+				<div class="text_light hideme" style="width: 340px; padding: 0px 25px;">
+					<h3><u>PROCESSESS+_ing.</u></h3>
+					<p>“The process,” or the best part as we call it. Whether it be
+						playing games together on the couch, over discord, or just playing
+						a single player game yourself, we do the exact same things with our
+						friends. Sitting down for a “dev sesh,” cracking a beer, getting a
+						new level done in the next dla installment; It’s all the same. And
+						we love every minute of it.</p><br/>
+					<a class="games_button" href="#" style="float: left">HERES OURS <img src="img/gamesicon.svg" /></a>
+					<a class="twitch_button" href="#" style="float: right">LIVE MAKING <img src="img/twitch.svg" /></a>
+				</div>
+				<img class="hideme" id="game-preview" style="float: right;" src="img/gamepreview.png" />
+			</div>
+		</div>
+
+		<div id="we-love-games" class="flex_box align_cen justify_cen flex_col" style="padding: 60px 0px;">
+			<img class="hideme" style="float: right;" src="img/dudes.png" />
+			<div class="text_light hideme" style="width: 50vw; min-width: 340px; padding: 0px 25px;">
+				<h3><u>Sounds reasonable, why though?</u></h3>
+				<p>Because we love the craft. Video game development comes with hurdles,
+					hoops, and problems you face that just aren’t anywhere else in the
+					world. The feeling of starting a fresh idea, finally fixing that bug
+					you’ve been working on for days, or thinking of that next new game
+					changing idea for the game currently under development. We don’t just
+					believe games should be fun for you, but us as well. </p><br/>
+				<a class="games_button2" href="#" style="float: left;">HERES OURS <img src="img/gamesicon.svg" /></a>
+			</div>
+		</div>
+
 		<div id="footer" class="footer_container align_cen justify_cen">
 			<div class="flex_box align_cen justify_cen">
 				<!-- 66px x 66px -->
@@ -66,8 +241,8 @@
 				<a class="footer_link" href="#"><img src="img/twitch.svg" /></a>
 			</div>
 			<div class="flex_box align_cen justify_cen">
-				<p id="legal">ᴄᴏᴘʏʀɪɢʜᴛ © 2019 ᴅᴜᴍʙʟᴜᴄᴋᴀʀᴛꜱ ᴀʟʟ ʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ.</p>
-				<a class="contact_button" href="#">ᴄᴏɴᴛᴀᴄᴛ <img src="img/mailicon.svg" width="16pt"/></a>
+				<p id="legal">Copyright &copy; 2018 dumbluckarts all rights reserved.</p>
+				<a class="contact_button" href="#">CONTACT <img src="img/mailicon.svg" width="16pt"/></a>
 			</div>
 		</div>
 
