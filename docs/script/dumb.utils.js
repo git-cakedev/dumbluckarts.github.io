@@ -2,7 +2,7 @@
 
 function Utils() {
     /*
-        example use of element in view script
+      example use of element in view script
     */
 
     /* var isElementInView = Utils.isElementInView($('#element-id'), false);
@@ -12,30 +12,38 @@ function Utils() {
     } else {
     	console.log('out of view');
     } */
+
+    /*
+      example use of lazy load image
+    */
+
+    // <img class="lazyimg" img-source="img/boxpic.png" alt="">
 }
 
 Utils.prototype = {
-    constructor: Utils,
-    isElementInView: function (element, fullyInView) {
-        var pageTop = $(window).scrollTop();
-        var pageBottom = pageTop + $(window).height();
-        var elementTop = $(element).offset().top;
-        var elementBottom = elementTop + $(element).height();
+  constructor: Utils,
 
-        if (fullyInView === true) {
-            return ((pageTop < elementTop) && (pageBottom > elementBottom));
-        } else {
-            return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
-        }
-    },
-    lazyLoadImg: function (element) {
-        let a = $( element );
-        let isInView = Utils.isElementInView(a, true);
-        if (isInView) {
-            a.attr('src', a.attr('img-source')); // load image from img-source
-            a.removeClass(element.replace('.','').replace('#','')); // remove class after img load
-        }
-    }
+  elementInView: function(element) {
+    var pageTop = $(window).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    var elementTop = $(element).offset().top;
+    var elementBottom = elementTop + $(element).height();
+    return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
+  },
+
+  loadImg: function (element) {
+    let $image = $( element );
+    let $imgSource = $image.attr('img-source');
+    let $class = element.replace('.','');
+    $image.attr('src', $imgSource);
+    $image.removeClass($class);
+  },
+
+  lazyImg: function (element) {
+    let $image = $( element );
+    let isInView = Utils.elementInView(element);
+    if (isInView) (Utils.loadImg(element));
+  }
 };
 
 var Utils = new Utils();

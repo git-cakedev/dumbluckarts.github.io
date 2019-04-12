@@ -11,6 +11,7 @@
 	body {
 		margin: 0;
 		background: var(--secondary-dark);
+		overflow-x: hidden;
 	}
 
 	:root {
@@ -200,7 +201,6 @@
 						<u>WHO'S, 'WE?'</u>
 					</h2>
 					<p id="about-us"></p>
-					<img class="lazyimg" img-source="img/boxpic.png" alt="">
 				</div>
 				<div>
 					<h2>
@@ -219,6 +219,7 @@
 						<u>OUR GAMES.</u>
 					</h2>
 					<p id="about-games"></p>
+					<img class="lazyimg" img-source="img/boxpic.png" alt="">
 				</div>
 				<div>
 					<h2>
@@ -230,29 +231,33 @@
 			<!-- end us page -->
 
 			<!-- start footer -->
-
+			<div>
+				<ul>
+					<li>
+						<img src="img/github.svn" alt="">
+					</li>
+					<li>
+						<img src="img/twitch.svg" alt="">
+					</li>
+					<li>
+						<img src="img/twitter.svg" alt="">
+					</li>
+				</ul>
+			</div>
 
 		</div>
 	</div>
 
-	<div class="main_content">
-
-		<div>
-			<h1>
-
-			</h1>
-		</div>
-	</div>
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 	<script src="script/dumb.utils.js"></script>
 	<script>
 
 		jQuery( document ).ready( function() {
 
-			dumbData = function() { 
-				$.getJSON('content/dumb.content.json', function(b) { 
-					loadPageData(b); 
-				}); 
+			dumbData = function() {
+				$.getJSON('content/dumb.content.json', function(b) {
+					loadPageData(b);
+				});
 			};
 
 			// load page content data
@@ -284,8 +289,8 @@
 
 			$( document ).on('scroll', function() {
 				//if theres images to load, load them when they're on screen.
-				if ($( '.lazyimg' ).length > 0) 
-				Utils.lazyLoadImg('.lazyimg');
+				if ($( '.lazyimg' ).length > 0)
+				Utils.lazyImg('.lazyimg');
 			});
 			// end event handlers
 
