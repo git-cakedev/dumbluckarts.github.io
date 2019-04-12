@@ -1,0 +1,32 @@
+{
+    "games": 
+        {
+            "just_launched":"WE’VE JUST LAUNCHED OUR FIRST GAME! ‘Ying + Ging’ is a 2 player cooperative flash game created in ‘Construct 2.’ Made during a 2 day game jam where 2 DLA members challenged themselves to make a functional game within the timespan. It ended up taking more than 2 days.",
+            "our_games":"We’ve made games finally! Check out our collection of games along with games currently planned and / or in development. ",
+            "coming_soon":"There’s some games in the works that we want to draw attention to! Mark your calendars, set your alarms, maybe reschedule them a few times! These games are either something we’d love to release at some point or currently love to finish at some point. Either way, they’re coming soon.",
+            "dla_abbrv":"We’re a small indie development studio just looking to make a name for themselves by making a bunch of games. Bad flash games, stupid 3d games, foolish platformers are our specialty. Why not check out who we are.",
+            "games_twitch":"Some of the DLA folk like to spend some time enjoying other people’s games, doing some music production, fooling around with some photoshop, or piercing everything together for our next newest release! Check out our developers inoahlad and nelsontron!"
+        }
+    ,
+    "art": 
+        {
+            "art_display":"We release sprites, video game assets, scenes from our games, and random art projects here.",
+            "art_twitch":"We need some viewers and love out at twitch! Why don’t you go and support our friendly neighbourhood developers inoahlad and nelsontron. ",
+            "give_feedback":"Do you like anything you see? The games? The art? The feedback header on our website? We’ll accept anything you wanna send us and try and get back to you with our thoughts to your idea, our answer to your question, or our support for your issues."
+        }
+    ,
+    "music": 
+        {
+            "our_music":"We sometimes dabble in the makin’ of some *great* tunes.",
+            "noah_dash":"Noah Dashney is a professional mixer, a great artist, and a great video game developer. Check him out, contact him, give him some love and give him some business!"
+        }
+    ,
+    "us": 
+        {
+            "about_us":"'WE’RE' DumbLuckArts, or DLA for short. A small independant video game, and new media and design art studio with absolutely no credibility. We’re owned and operated by a small group of friends who decided to make video games on a couch somewhere in Calgary AB Canada. Each of us pour our heart and soul into our projects, and everything we release we’re extremely proud of. ",
+            "sounds_hard":"Video game development comes with hurdles, hoops, and problems you face that just aren’t anywhere else in the world. We understand that not everything we make is gonna be a masterpiece, but we think we deserve some constructive criticism! Tell us why you liked or disliked us. We can start a meaningful conversation together.",
+            "process":"We may be small but that doesn’t really matter does it? Each of us bring unique and interesting ideas and skills to the table ranging from artistic ability, to program ability, our team fits the bill! Bug fixes, new features, new levels, games, and well, everything might take a while but hey, we’ll get the game to you sometime. The only difference is it being up to our standard!",
+            "about_games":"Whether it be playing games together on the couch, over discord, or just playing a single player game yourself, we do the exact same things with our friends. Sitting down for a 'dev sesh,' cracking a beer, getting a new level done in the next dla installment; It’s all the same. And we love every minute of it.",
+            "art_project":"Everything we do is because we just love doing it. We don’t ask for money to play our games, they’re all available online for anyone to use. Please consider a donation! We’ll throw in a personal thank_you, a download of your favourite game for any price, and a name on our wall!"
+        }
+}

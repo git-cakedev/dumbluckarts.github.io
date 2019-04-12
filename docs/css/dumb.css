@@ -1,0 +1,125 @@
+/* custom scrollbar snippet code  */
+::-webkit-scrollbar {width: 6px;height: 6px;}
+::-webkit-scrollbar-button {width: 0px;height: 0px;}
+::-webkit-scrollbar-thumb {background: #e1e1e1;border: 0px none #ffffff;border-radius: 0px;}
+::-webkit-scrollbar-thumb:hover {background: #ffffff;}
+::-webkit-scrollbar-thumb:active {background: #1b1b1b;}
+::-webkit-scrollbar-track {background: #666666;border: 0px none #ffffff;border-radius: 0px;}
+::-webkit-scrollbar-track:hover {background: #666666;}
+::-webkit-scrollbar-track:active {background: #333333;}
+::-webkit-scrollbar-corner {background: transparent;}
+/* end custom scrollbar snippet code */
+
+/* flex box */
+.flex {
+	display: flex;	
+}
+
+.flexcol {
+    flex-direction: column;
+}
+
+.flexrow {
+    flex-direction: row;
+}
+
+.alignc {
+    align-items: center;
+}
+
+.align_self_stretch {
+    align-self: stretch;
+}
+
+.justifyc {
+    justify-content: center;
+}
+/* end flex box */
+
+/* other boxes */
+.block {
+    display: block;
+}
+
+.inlblock {
+    display: inline-block;
+}
+
+.grid {
+    display: grid;
+}
+/* end other boxes */
+
+/* box adjustments */
+
+.fullscreen_box,
+.fs_box {
+    width: 100vw; height: 100vh;
+}
+
+.horizontal_full_screen_box,
+.hfs_box {
+    width: 100vw;
+}
+
+.horizontal_half_screen_box,
+.hhs_box {
+    width: 50vw;
+}
+
+.vertical_full_screen_box,
+.vfs_box {
+    height: 100vh;
+}
+
+.vertical_half_screen_box,
+.vhs_box {
+    height: 50vh;
+}
+
+.max_mobile_width_box,
+.mmw_box {
+    max-width: 340px;
+}
+/* end box adjustments */
+
+/* format text */
+.format_paragraph {
+    font-family: var(--font-paragraph);
+    font-size: var(--font-small);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.format_header {
+    font-family: var(--font-header);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.format_link {
+    font-family: var(--font-paragraph);
+    font-size: var(--font-small);
+    font-weight: 300;
+}
+
+.nounderline {
+    text-decoration: none;
+}
+
+.format_link:hover {
+    color: var(--primary);
+}
+
+.white_text {
+    color: #fff;
+}
+
+.black_text {
+    color: #000;
+}
+
+.textc {
+    text-align: center;
+}
+/* end format text */

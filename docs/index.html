@@ -10,6 +10,7 @@
 
 	body {
 		margin: 0;
+		background: var(--secondary-dark);
 	}
 
 	:root {
@@ -25,56 +26,8 @@
 		--font-small: 14pt;
 		--font-mid: 16pt;
 		--font-large: 18pt;
+		--font-xl: 24pt;
 	}
-
-	/* custom scrollbar snippet code  */
-	::-webkit-scrollbar {width: 6px;height: 6px;}
-	::-webkit-scrollbar-button {width: 0px;height: 0px;}
-	::-webkit-scrollbar-thumb {background: #e1e1e1;border: 0px none #ffffff;border-radius: 0px;}
-	::-webkit-scrollbar-thumb:hover {background: #ffffff;}
-	::-webkit-scrollbar-thumb:active {background: #1b1b1b;}
-	::-webkit-scrollbar-track {background: #666666;border: 0px none #ffffff;border-radius: 0px;}
-	::-webkit-scrollbar-track:hover {background: #666666;}
-	::-webkit-scrollbar-track:active {background: #333333;}
-	::-webkit-scrollbar-corner {background: transparent;}
-	/* end custom scrollbar snippet code */
-
-	/* format text */
-	.format_paragraph {
-		font-family: var(--font-paragraph);
-		font-size: var(--font-small);
-		text-decoration: none;
-		font-weight: 300;
-	}
-
-	.format_header {
-		font-family: var(--font-header);
-		text-decoration: none;
-		font-weight: 300;
-	}
-
-	.format_link {
-		font-family: var(--font-paragraph);
-		font-size: var(--font-small);
-		text-decoration: none;
-		font-weight: 300;
-	}
-
-	.format_link:hover {
-		color: var(--primary);
-	}
-	/* end format text */
-
-	/* primary color button with contrast text */
-	.contrast_button_primary {
-		background: var(--primary);
-		color: #fff;
-	}
-
-	.contrast_button_primary:hover {
-		background: var(--primary-dark);
-	}
-	/* end primary color button */
 
 	.loading_screen {
 		position: fixed;
@@ -85,169 +38,259 @@
 		z-index: 10;
 	}
 
-	/* flex box */
-	.flex_box {
-		display: flex;
+	.nav_bar {
+		width: 100vw;
+		height: 80px;
 	}
 
-	.alignc {
-		align-items: center;
+	.nav_bar ul li a {
+		font-size: var(--font-large);
 	}
 
-	.justifyc {
-		justify-content: center;
-	}
-	/* end flex box */
 
-	.fullscreen_box {
-		width: 100vw; height: 100vh;
+	.main_content {
+		width: calc(100% - 2em);
+		height: 100px;
 	}
-
 	</style>
+	<link rel="stylesheet" href="css/dumb.css">
 </head>
+	<!-- nelson.m nelsontron@outlook.com -->
 <body>
 
 	<!-- start loading screen -->
-	<div class="loading_screen fullscreen_box flex_box alignc justifyc ">
+	<div class="loading_screen fs_box flex alignc justifyc ">
 		<img src="img/dlalogo.svg" width="100px" alt="img/dlalogo.png">
 		<p>🄻🄾🄰🄳🄸🄽🄶...</p>
 	</div>
 	<!-- end loading screen -->
 
+	<!-- start navigation bar -->
+	<div class="nav_bar flex alignc">
+		<ul class="hfs_box" style="margin-right:2em;">
+			<li class="inlblock">
+				<a class="white_text format_link" href="#">DLA | HOME</a>
+			</li>
+			<li class="inlblock" style="float:right;">
+				<a class="white_text format_link nounderline" href="">➫ ☰</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end navigation bar -->
+
+	<!-- start navigation menu opened when burger menu is clicked -->
+	<div class="nav_menu">
+		<ul>
+			<li>
+				<a class="white_text format_link" href="">GAMES <img src="img/gamesicon.svg" alt=""></a>
+			</li>
+			<li>
+				<a class="white_text format_link" href="">ART <img src="img/articon.svg" alt=""></a>
+			</li>
+			<li>
+				<a class="white_text format_link" href="">MUSIC <img src="img/musicicon.svg" alt=""></a>
+			</li>
+			<li>
+				<a class="white_text format_link" href="">US <img src="img/usicon.svg" alt=""></a>
+			</li>
+		</ul>
+	</div>
+	<!-- end navigation menu -->
+
+	<div class="dla_header">
+		<video src="img/moon.mp4" style="height:500px;"></video> <!-- temporary formatting -->
+		<ul>
+			<li>
+				<a class="white_text format_link" href="">GAMES <img src="img/gamesicon.svg" alt=""></a>
+			</li>
+			<li>
+				<a class="white_text format_link" href="">ART <img src="img/articon.svg" alt=""></a>
+			</li>
+			<li>
+				<a class="white_text format_link" href="">MUSIC <img src="img/musicicon.svg" alt=""></a>
+			</li>
+			<li>
+				<a class="white_text format_link" href="">US <img src="img/usicon.svg" alt=""></a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="flex justifyc">
+		<div class="main_content">
+
+			<!-- start games page -->
+			<div id="games">
+				<div>
+					<h2>
+						<u>WE'VE JUST LAUNCHED!</u>
+					</h2>
+					<p id="just-launched"></p>
+				</div>
+				<div>
+					<h2>
+						<u>OUR GAME(S)</u>
+					</h2>
+					<p id="our-games"></p>
+				</div>
+				<div>
+					<h2>
+						<u>COMING SOON.</u>
+					</h2>
+					<p id="coming-soon"></p>
+				</div>
+				<div>
+					<h2>
+						<u>DUMBLUCKARTS or DLA.</u>
+					</h2>
+					<p id="dla-abbrv"></p>
+				</div>
+				<div>
+					<h2>
+						<u>WE MAKE GAMES ON TWITCH!</u>
+					</h2>
+					<p id="games-twitch"></p>
+				</div>
+			</div>
+			<!-- end games page -->
+
+			<!-- start art page -->
+			<div id="art">
+				<div>
+					<h2>
+						<u>ART.</u>
+					</h2>
+					<p id="art-display"></p>
+				</div>
+				<div>
+					<h2>
+						<u>WE MIGHT BE STREAMING!</u>
+					</h2>
+					<p id="art-twitch"></p>
+				</div>
+				<div>
+					<h2>
+						<u>WE'D LOVE SOME FEEDBACK.</u>
+					</h2>
+					<p id="give-feedback"></p>
+				</div>
+			</div>
+			<!-- end art page -->
+
+			<!-- start music page -->
+			<div id="music">
+				<div> <!-- downloads and previews for all music we've made / wanted to post -->
+					<h2>
+						<u>WE MAKE OUR TUNES!</u>
+					</h2>
+					<p id="our-music"></p>
+				</div>
+				<div> <!-- noah mixing shoutout -->
+					<h2>
+						<u>CHECK THIS GUY OUT!</u>
+					</h2>
+					<p id="noah-dash"></p>
+				</div>
+			</div>
+			<!-- end music page -->
+
+			<!-- start us page -->
+			<div id="us">
+				<div>
+					<h2>
+						<u>WHO'S, 'WE?'</u>
+					</h2>
+					<p id="about-us"></p>
+					<img class="lazyimg" img-source="img/boxpic.png" alt="">
+				</div>
+				<div>
+					<h2>
+						<u>THIS SOUNDS HARD.</u>
+					</h2>
+					<p id="sounds-hard"></p>
+				</div>
+				<div>
+					<h2>
+						<u>OUR PROCESS.</u>
+					</h2>
+					<p id="process"></p>
+				</div>
+				<div>
+					<h2>
+						<u>OUR GAMES.</u>
+					</h2>
+					<p id="about-games"></p>
+				</div>
+				<div>
+					<h2>
+						<u>ITS AN ART PROJECT.</u>
+					</h2>
+					<p id="art-project"></p>
+				</div>
+			</div>
+			<!-- end us page -->
+
+			<!-- start footer -->
+
+
+		</div>
+	</div>
+
 	<div class="main_content">
 
-		<!-- start navigation bar -->
-		<div class="nagivation_bar">
-			<!-- TODO: dynamic changing page header name after logo -->
-			<!-- TODO: hamburger menu that opens menu that looks like grid -->
-			<!-- TODO: menu links -->
-			<!-- TODO: show contact, twitch, and twitter button -->
-			<!-- TODO: change dynamic page header name to "menu" -->
+		<div>
+			<h1>
+
+			</h1>
 		</div>
-		<!-- end navigation bar -->
-
-		<!-- start video header with menu -->
-		<div class="flex_box align_cen justify_cen">
-			<!-- TODO: add background video -->
-			<!-- TODO: menu logo -->
-			<!-- TODO: menu links -->
-		</div>
-		<!-- end video header with menu  -->
-
-		<!-- start footer content -->
-		<div class="flex_box align_cen justify_cen">
-			<!-- TODO: contact button -->
-			<!-- TODO: Copyright notice -->
-			<!-- TODO: twitch, twitter, github icon with tooltips link -->
-			<!-- TODO: back to top button -->
-			<!-- TODO: donate button -->
-		</div>
-		<!-- end footer content -->
-
-		<!-- import script and add jquery library -->
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
-		<script src="script/dumb.luck.js" charset="utf-8"></script>
-		<!-- end import script and add jquery library -->
-
 	</div>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="script/dumb.utils.js"></script>
+	<script>
 
-	<div id="main-content">
-		<div class="navigation_bar">
-			<div id="nav">
-				<a id="nav-logo" href="#">&nbsp;&nbsp;DLA <img src="img/homeicon.svg" /> <i id="page-indicator">HOME</i></a>
-				<a id="burger-menu" class="nav_link" style="margin: 25px; margin-right: 5vw;">&nbsp;&nbsp;➫ ☰</a>
-			</div>
+		jQuery( document ).ready( function() {
 
-			<div id="nav-links">
-				<a class="nav_link" href="https://google.com">&nbsp;&nbsp; GAMES <img src="img/gamesicon.svg" /></a>
-				<a class="nav_link" href="#">&nbsp;&nbsp; ART <img src="img/articon.svg" /></a>
-				<a class="nav_link" href="#">&nbsp;&nbsp; MUSIC <img src="img/musicicon.svg" /></a>
-				<a class="nav_link" href="#">&nbsp;&nbsp; US <img src="img/usicon.svg" /></a>
-			</div>
-		</div>
-		<div id="moon-container" class="flex_box align_cen justify_cen">
-			<video id="moon-video" autoplay muted loop>
-				<source src="img/moon.mp4" type="video/mp4" />
-			</video>
-				<img id="dla-logo" src="img/dlalogo.svg" />
-				<div id="menu-buttons">
-					<a class="menu-link" href="#">DLA <img src="img/homeicon.svg" /> HOME</a>
-					<a class="menu-link" href="https://google.com">&nbsp;&nbsp; GAMES <img src="img/gamesicon.svg" /></a>
-					<a class="menu-link" href="#">&nbsp;&nbsp; ART <img src="img/articon.svg" /></a>
-					<a class="menu-link" href="#">&nbsp;&nbsp; MUSIC <img src="img/musicicon.svg" /></a>
-					<a class="menu-link" href="#">&nbsp;&nbsp; US <img src="img/usicon.svg" /></a>
-				</div>
-		</div>
+			dumbData = function() { 
+				$.getJSON('content/dumb.content.json', function(b) { 
+					loadPageData(b); 
+				}); 
+			};
 
-		<div class="flex_box align_cen justify_cen" style="padding-top: 60px">
-			<div class="text_light hideme">
-				<h2><u>ABOUT US</u></h2>
-			</div>
-		</div>
+			// load page content data
+			dumbData();
 
-		<div class="header_container flex_box align_cen justify_cen">
-			<div id="about-us" class="flex_box align_cen justify_cen">
-				<img class="hideme" src="img/bubbles.svg" alt="" width="340px" style="padding: 25px">
-				<div class="text_light hideme" style="width: 340px;">
-					<h3><u>WHO'S 'WE?'.</u></h3>
-					<p>We’re dumb luck arts. Aptly named, dumbluckarts, or dla is a small
-					indie new media and design development studio owned and operated by
-					a group of dudes who wanna make games. Based in Calgary, AB,
-					we love making games because we love playing games. Each of us
-					have had our lives impacted by other peoples video game creations.
-					Each of us have had the dream to make something someone else will
-					love. Each of us love making games because of it.</p>
-					<a class="games_button" href="#" style="float: left">SEE MEMBER(S) <img src="img/membersicon.svg" /></a>
-				</div>
-			</div>
-		</div>
+			// place page content data
+			function loadPageData(object) {
 
-		<div id="we-love-games" class="flex_box" style="width: auto; margin: 0; padding-bottom: 25px;">
-			<div class="flex_box align_cen justify_cen">
-				<div class="text_light hideme" style="width: 340px; padding: 0px 25px;">
-					<h3><u>PROCESSESS+_ing.</u></h3>
-					<p>“The process,” or the best part as we call it. Whether it be
-						playing games together on the couch, over discord, or just playing
-						a single player game yourself, we do the exact same things with our
-						friends. Sitting down for a “dev sesh,” cracking a beer, getting a
-						new level done in the next dla installment; It’s all the same. And
-						we love every minute of it.</p><br/>
-					<a class="games_button" href="#" style="float: left">HERES OURS <img src="img/gamesicon.svg" /></a>
-					<a class="twitch_button" href="#" style="float: right">LIVE MAKING <img src="img/twitch.svg" /></a>
-				</div>
-				<img class="hideme" id="game-preview" style="float: right;" src="img/gamepreview.png" />
-			</div>
-		</div>
+				//get data within each page object.
+				placeWebsiteContent = function(object) {
+					$.each(object, function( i, data ) {
+						let id = '#' + i.replace('_', '-');
+						let element = $( id );
+						element.html(data);
+					});
+				}
 
-		<div id="we-love-games" class="flex_box align_cen justify_cen flex_col" style="padding: 60px 0px;">
-			<img class="hideme" style="float: right;" src="img/dudes.png" />
-			<div class="text_light hideme" style="width: 50vw; min-width: 340px; padding: 0px 25px;">
-				<h3><u>Sounds reasonable, why though?</u></h3>
-				<p>Because we love the craft. Video game development comes with hurdles,
-					hoops, and problems you face that just aren’t anywhere else in the
-					world. The feeling of starting a fresh idea, finally fixing that bug
-					you’ve been working on for days, or thinking of that next new game
-					changing idea for the game currently under development. We don’t just
-					believe games should be fun for you, but us as well. </p><br/>
-				<a class="games_button2" href="#" style="float: left;">HERES OURS <img src="img/gamesicon.svg" /></a>
-			</div>
-		</div>
+				//get each page and place data into proper elements.
+				$.each(object, function( i, data ) {
+					placeWebsiteContent(data);
+				});
 
-		<div id="footer" class="footer_container align_cen justify_cen">
-			<div class="flex_box align_cen justify_cen">
-				<!-- 66px x 66px -->
-				<a class="footer_link" href="#"><img src="img/github.svg" /></a>
-				<a class="footer_link" href="#"><img src="img/twitter.svg" /></a>
-				<a class="footer_link" href="#"><img src="img/twitch.svg" /></a>
-			</div>
-			<div class="flex_box align_cen justify_cen">
-				<p id="legal">Copyright &copy; 2018 dumbluckarts all rights reserved.</p>
-				<a class="contact_button" href="#">CONTACT <img src="img/mailicon.svg" width="16pt"/></a>
-			</div>
-		</div>
+			}
+			// end place page content data
 
-	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
-	<script src="script/dumb.luck.js"></script>
+			// start event handlers
+			$( '.nav_menu' ).hide();
+			$( '.loading_screen' ).hide();
+
+			$( document ).on('scroll', function() {
+				//if theres images to load, load them when they're on screen.
+				if ($( '.lazyimg' ).length > 0) 
+				Utils.lazyLoadImg('.lazyimg');
+			});
+			// end event handlers
+
+		});
+
+	</script>
 </body>
 </html>
